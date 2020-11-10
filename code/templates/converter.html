@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>RUiN's IMG Converter</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/form.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/convert.css')}}">
+</head>
+<body>
+    <div class="header">
+        <h1>RUiN's Image Converter</h1>
+        <p>A Simple App to convert images into PNG</p>
+    </div>
+
+    <div class="navbar">
+		<a href="{{ url_for('convert') }}">IMG Converter</a>
+		<a href="{{ url_for('watermark') }}">Watermark Editor</a>
+		<a href="{{ url_for('extract') }}">Watermark Extractor</a>
+		<a href="{{ url_for('homepage') }}" class="right">Home</a>
+    </div>
+    <div class="row">
+
+        <section id="con_box">
+            <div class="img_box"><img src="{{url_for('static', filename='img/kanata.jpg')}}" id="source_img"></div>
+            <canvas id="canvas"></canvas>
+            <div class="to">TO</div>
+            <div class="img_box"><img id="preview_img"></div>
+            <div class="select_box">
+                <section class="file_choose">
+                    <span>Please select a local image:</span>
+                    <label for="file">+</label>
+                    <input type="file" id="file" name="file" accpet="image/*">
+                </section>
+            </div>
+
+            <div class="tips">
+                The converter allows you to change any image file into PNG file.
+            </div>
+            <p></p>
+            <button id="turnTo">Convert</button>
+            <button id="download">Download</button>
+        </section>
+
+    </div>
+
+    <a id="downIMG"></a>
+
+    <button onclick="topFunction()" class="button" id="myBtn" title="Back to top">Top</button>
+	<script>
+		window.onscroll = function() {scrollFunction()};
+		function scrollFunction() {console.log(121);
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				document.getElementById("myBtn").style.display = "block";
+			} else {
+				document.getElementById("myBtn").style.display = "none";
+			}
+		}
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
+
+    <div class="footer">
+		<h2>Created by 3180105640 RUiN</h2>
+		<p>Copyright ©RUiN <span id="ym"></span></p>
+  	</div>
+	<script>
+        var date = new Date();
+        var y = date.getFullYear();
+        var m = date.getMonth() + 1;
+        document.getElementById("ym").innerHTML = y + "." + m;
+    </script>
+
+<script type="text/javascript" src="{{url_for('static', filename='js/convert.js')}}"></script>
+</body>
+</html>

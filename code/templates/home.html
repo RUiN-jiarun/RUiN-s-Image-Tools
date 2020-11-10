@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RUiN's Image Hub</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{url_for('static',filename='css/form.css')}}"/>
+</head>
+<body>
+
+	<div class="header">
+    	<h1>RUiN's Image Hub</h1>
+    	<p>A Simple Page of Image Utils</p>
+  	</div>
+
+	<div class="navbar">
+		<a href="{{ url_for('convert') }}">IMG Converter</a>
+		<a href="{{ url_for('watermark') }}">Watermark Editor</a>
+		<a href="{{ url_for('extract') }}">Watermark Extractor</a>
+		<a href="{{ url_for('homepage') }}" class="right">Home</a>
+	</div>
+	
+	<div class="row">
+	<div class="side">
+		<h2>About me</h2>
+		<p>Liu Jiarun</p>
+		<p>......</p>
+
+
+	</div>
+	
+
+    <div class="main">
+        <h2>About my image hub</h2>
+        <p>This website includes some simple image tools, such as format converter and watermark editor.</p>
+    	<p>...I'm trying to use the same format of my music hub...</p>
+		<p>...But I don't want to upload too many pictures...</p>
+		<p>So this home page looks sucks.</p>
+		<p>Sorry about the mess.</p>
+	</div>
+  	</div>
+
+  	<div class="footer">
+		<h2>Created by 3180105640 RUiN</h2>
+		<p>Copyright ©RUiN <span id="ym"></span></p>
+  	</div>
+	<script>
+        var date = new Date();
+        var y = date.getFullYear();
+        var m = date.getMonth() + 1;
+        document.getElementById("ym").innerHTML = y + "." + m;
+    </script>
+
+	<button onclick="topFunction()" class="button" id="myBtn" title="Back to top">Top</button>
+	<script>
+		window.onscroll = function() {scrollFunction()};
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				document.getElementById("myBtn").style.display = "block";
+			} else {
+				document.getElementById("myBtn").style.display = "none";
+			}
+		}
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
+
+</body>
+</html>

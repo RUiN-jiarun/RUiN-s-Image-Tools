@@ -1,0 +1,110 @@
+#con_box{
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(#95CDCD, #dcdcdc, white);
+    box-shadow:0px 0px 10px rgba(0,0,0,0.9);
+    border: none;
+    border-radius: 10px;
+    padding:0em 8%;
+    position: relative;
+    text-align: center;
+}
+
+.img_box{
+    width: 100%;
+    max-width: 36%;
+    max-height: 63.4%;
+    height: 100%;
+    display: inline-block;
+    margin-top: 2em;
+    position: relative;
+}
+
+.img_box img{
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#canvas{
+    display: none;
+}
+
+.to{
+    display: inline-block;
+    width: 20%;
+    max-width: 20%;
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+.select_box{
+    text-align: left;
+    width: 92%;
+    margin:0 auto;
+    margin-top: 2em;
+}
+
+.file_choose{
+    margin: 0 auto;
+    font-weight: bold;
+    font-size:1.4em;
+    text-align: left;
+    display: block;
+}
+
+.file_choose>label{
+    margin-left: 2em;
+    padding:0 1.2em;
+    font-size: 1.1em;
+    font-weight: bolder;
+    background: #222;
+    color:#fff;
+}
+
+.file_choose>label:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px red;
+}
+
+.file_choose>input{
+    display: none;
+}
+
+.tips{
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 92%;
+    margin:0 auto;
+    margin-top: 1em;
+}
+
+#turnTo, #download{
+    margin: 35px;
+    padding: 0 1em;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    background: -webkit-linear-gradient(#ffffff,#dfdfdf);
+    background: -o-linear-gradient(#ffffff,#dfdfdf);
+    background: -moz-linear-gradient(#ffffff,#dfdfdf);
+    background: linear-gradient(#ffffff,#dfdfdf);
+    box-shadow: 0px 0px 5px rgba(255,255,255,0.7);
+    font-weight: bolder;
+    font-size: 25px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+#turnTo:hover, #download:hover{
+    background: -webkit-linear-gradient(#66ccff,#74b1d1);
+    background: -o-linear-gradient(#66ccff,#74b1d1);
+    background: -moz-linear-gradient(#66ccff,#74b1d1);
+    background: -ms-linear-gradient(#66ccff,#74b1d1);
+    background: linear-gradient(#66ccff,#74b1d1);
+    cursor: pointer;
+    border: #6cf 1px solid;
+}
+
